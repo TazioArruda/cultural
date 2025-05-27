@@ -1,0 +1,15 @@
+import { Zap } from "lucide-react"
+import { cn } from "@/lib/utils"
+
+export default function Logo({ variant = "light", className }) {
+  const isLight = variant === "light"
+
+  return (
+    <div className={cn("flex items-center space-x-2", className)}>
+      <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+        <Zap className="w-5 h-5 text-white" />
+      </div>
+      <span className={cn("text-xl font-bold", isLight ? "text-gray-900" : "text-white")}>SeuProduto</span>
+    </div>
+  )
+}
